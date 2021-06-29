@@ -216,58 +216,78 @@ if(empty($_POST["email"])){
 	
 
 ?> 
-<html> 
+
+<html>
 	<head></head>
 	<body>
-		<form>
+		<form  method="post" action="">
 		<fieldset>
 			<table>
-			<tr>
-			<td><h3><u> Student Profile </u></h3> </td>
-			</tr>
+			<h3><center><u>Welcome to Learn Panda</u></center></h3>
+            <td><h3><u> Teacher Creation Form </u></h3> </td>
 				<tr>
-				
-					<td>Name :</td>
-					<td> <input type="text" name="name" value="<?php echo $name; ?>" placeholder=" Your Name "> </td>
+					<td> Mentor Name :</td>
+					<td> <input type="text" name="name" value="<?php echo $name; ?>" placeholder="Mentor Name "> </td>
 					<td><span> <?php echo $err_name;?> </span></td>
 				</tr>
-				</tr>
 				<tr>
-				<td>Father's Name :</td>
+				    <td>Father's Name :</td>
 					<td><input type="text" name="fathername" value="<?php echo $fathername; ?>" placeholder=" Father's Name"> </td>
 					<td><span> <?php echo $err_fathername;?> </span></td>
 				</tr>
 				<tr>
-				<td>Mother's Name :</td>
+					<td>Mother's Name :</td>
 					<td><input type="text" name="mothername" value="<?php echo $mothername; ?>" placeholder=" Mother's Name"> </td>
 					<td><span> <?php echo $err_mothername;?> </span></td>
 				</tr>
-				<tr>
-				<td>Present Address :</td>
-					<td><input type="text" name="street" value="<?php echo $street; ?>" placeholder="Street Address"> <input type="text" name="city" value="<?php echo $city; ?>" placeholder="City">- <input type="text" name="state" value="<?php echo $state; ?>" placeholder="State"> <br> <input type="text" name="postal" value="<?php echo $postal; ?>" placeholder="Postal/Zip Code">  </td>
-					<td><span> <?php echo $err_street;?> </span></td>
-					<td><span> <?php echo $err_city;?> </span></td>
-					<td><span> <?php echo $err_state;?> </span></td>
-					<td><span> <?php echo $err_postal;?> </span></td>
+                <tr>
+					<td>Educational Background :</td>
+					<td> <input type="text" placeholder=" Educational Background "> </td>
 				</tr>
-				<tr>
-				<td>Permanent Address :</td>
-					<td><input type="text" name="street" value="<?php echo $street; ?>" placeholder="Street Address"> <input type="text" name="city" value="<?php echo $city; ?>" placeholder="City">- <input type="text" name="state" value="<?php echo $state; ?>" placeholder="State"> <br> <input type="text" name="postal" value="<?php echo $postal; ?>" placeholder="Postal/Zip Code">  </td>
-					<td><span> <?php echo $err_street;?> </span></td>
-					<td><span> <?php echo $err_city;?> </span></td>
-					<td><span> <?php echo $err_state;?> </span></td>
-					<td><span> <?php echo $err_postal;?> </span></td>
+                <tr>
+					<td>Specialist:</td>
+					<td> <input type="text" placeholder=" Specialist "> </td>
 				</tr>
-				<tr>
-				<td>Email :</td>
-					<td><input type="email" name="email" value="<?php echo $email; ?>" placeholder=" Your Email"> </td>
+                <tr>
+					<td>Course Name :</td>
+					<td>
+                       <select name="courses" id="courses">
+                       <option value="none">Select Course</option>
+                       <option value="it">Information Technologies</option>
+                       <option value="arts">Arts & Humanties</option>
+                       <option value="business">Business</option>
+                       <option value="cs">Computer Scienc</option>
+                       <option value="ds">Data Science</option>
+                       <option value="math">Math & logic</option>
+                       </select>
+					</td>
+				</tr></br>
+					<td>Email :</td>
+					<td><input type="email" name="email" value="<?php echo $email; ?>"placeholder="Insert Your Email">  </td>
 					<td><span> <?php echo $err_email;?> </span></td>
+				</tr>
 				<tr>
-				<td>Phone :</td>
-					<td><input type="text" name="code" value="<?php echo $code; ?>" placeholder="Code"> <input type="text" name="number" value="<?php echo $number; ?>" placeholder="Phone Number"> </td>
+					<td>Phone :</td>
+					<td><input type="number" name="code" value="<?php echo $code; ?>" placeholder="Code"> <input type="text" name="number" value="<?php echo $number; ?>" placeholder="Number"> </td>
 					 
-					 <td><span> <?php echo $err_code;?> </span></td>
-					 <td><span> <?php echo $err_number;?> </span></td>
+					<td><span> <?php echo $err_code;?> </span></td>
+					<td><span> <?php echo $err_number;?> </span></td>
+				</tr>
+				<tr>
+					<td>Present Address :</td>
+					<td><input type="text" name="street" value="<?php echo $street; ?>" placeholder="Street Address"> <input type="text" name="city" value="<?php echo $city; ?>" placeholder="City">- <input type="text" name="state" value="<?php echo $state; ?>" placeholder="State"> <br> <input type="text" name="postal" value="<?php echo $postal; ?>" placeholder="Postal/Zip Code">  </td>
+					<td><span> <?php echo $err_street;?> </span></td>
+					<td><span> <?php echo $err_city;?> </span></td>
+					<td><span> <?php echo $err_state;?> </span></td>
+					<td><span> <?php echo $err_postal;?> </span></td>
+				</tr>
+				<tr>
+					<td>Permanent Address :</td>
+					<td><input type="text" name="street" value="<?php echo $street; ?>" placeholder="Street Address"> <input type="text" name="city" value="<?php echo $city; ?>" placeholder="City">- <input type="text" name="state" value="<?php echo $state; ?>" placeholder="State"> <br> <input type="text" name="postal" value="<?php echo $postal; ?>" placeholder="Postal/Zip Code">  </td>
+					<td><span> <?php echo $err_street;?> </span></td>
+					<td><span> <?php echo $err_city;?> </span></td>
+					<td><span> <?php echo $err_state;?> </span></td>
+					<td><span> <?php echo $err_postal;?> </span></td>
 				</tr>
 				<tr>
 					<td>Enter Password :</td>
@@ -279,9 +299,12 @@ if(empty($_POST["email"])){
 					<td><input type="password" value="<?php echo $confirmpassword; ?>" placeholder=" Confirm Password"></td>
 					<td><span> <?php echo $err_confirmpassword;?> </span></td>
 				</tr>
+				</tr>
 				<tr>
-					<td  rowspan="2"><input type="reset" name="edit" value="Edit"><input type="submit" name="submit" value="Submit"></td>
-				</table>
+					<td  rowspan="2"><input type="reset" value="Edit"><input type="submit" name="submit" value="Submit"><input type="reset" value="Delete"></td>
+					
+				</tr>
+                </table>
 		</fieldset>
 		</form>
 	</body>
